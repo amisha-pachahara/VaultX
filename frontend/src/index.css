@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(110vh) rotate(0deg) scale(0.85);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.28;
+  }
+  85% {
+    opacity: 0.28;
+  }
+  100% {
+    transform: translateY(-15vh) rotate(360deg) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 0.32;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.06);
+  }
+}
+
+.animate-float-symbol {
+  animation: floatUp linear infinite;
+}
+
+.animate-glow-slow {
+  animation: pulseSlow 9s ease-in-out infinite;
+}
+
+body {
+  background-color: #060508;
+  color: #f4f4f5;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  letter-spacing: 0.01em;
+}
+
+.font-editorial {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
